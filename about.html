@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<style>
+  #menu-list, #about-info {
+    display: none;
+    background: #f8f8f8;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+  }
+  #menu-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  #menu-list li {
+    margin: 5px 0;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="top">Online</h1>
+  <h1 id="top1">FoodShop</h1>
+</header>
+<hr>
+<nav id="navbar">
+  <img src="Meal2.jpg">
+  <ul id="navcontent">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#" id="about-link">About</a></li>
+      <li><a href="#" id="menu-link">Menu</a></li>
+      <li><a href="contact.html">ContactUs</a></li>
+  </ul>
+</nav>
+
+<!-- About Section -->
+<div id="about-info">
+  <h2>About Us</h2>
+  <p>
+    Welcome to Subodh FoodShop! We are passionate about delivering delicious, freshly-prepared meals
+    right to your doorstep. Our chefs use the best ingredients, and our menu offers something for everyone!
+  </p>
+</div>
+
+<!-- Menu Section -->
+<div id="menu-list">
+  <h2>Our Menu</h2>
+  <ul>
+    <li>Pizza</li>
+    <li>Burger</li>
+    <li>Pasta</li>
+    <li>Salad</li>
+    <li>Desserts</li>
+  </ul>
+</div>
+
+<div id="container1">
+  <div id="row1">Welcome to Online FoodShop</div>
+  <button class="btn">ORDER NOW</button>
+  <div id="container3">
+    <div id="row2"><button class="btn">Prices</button></div>
+    <div id="row3"><button class="btn">Specials</button></div>
+  </div>
+</div>
+
+<hr>
+<h1 id="top3">Featured Products</h1>
+<div id="container4">
+  <div id="row4"><button class="btn">ORDER NOW</button></div>
+  <div id="row5"><button class="btn">ORDER NOW</button></div>
+  <div id="row6"><button class="btn">ORDER NOW</button></div>
+</div>
+
+<footer>Copyright © 2020-2021 OnlineFoodShop. All Rights are reserved</footer>
+
+<script>
+  // Toggle Menu
+  document.getElementById("menu-link").addEventListener("click", function(e) {
+    e.preventDefault();
+    const menuList = document.getElementById("menu-list");
+    const aboutInfo = document.getElementById("about-info");
+    // Hide About if showing
+    aboutInfo.style.display = "none";
+    // Toggle Menu
+    if (menuList.style.display === "none" || menuList.style.display === "") {
+      menuList.style.display = "block";
+    } else {
+      menuList.style.display = "none";
+    }
+  });
+
+  // Toggle About
+  document.getElementById("about-link").addEventListener("click", function(e) {
+    e.preventDefault();
+    const aboutInfo = document.getElementById("about-info");
+    const menuList = document.getElementById("menu-list");
+    // Hide Menu if showing
+    menuList.style.display = "none";
+    // Toggle About
+    if (aboutInfo.style.display === "none" || aboutInfo.style.display === "") {
+      aboutInfo.style.display = "block";
+    } else {
+      aboutInfo.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
